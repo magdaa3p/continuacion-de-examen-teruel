@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Agregar Usuario</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Agregar Usuario</h1>
+		<form action="#" th:action="@{/usuarios}" th:object="${usuario}"
+			method="post">
+			<div class="form-group">
+				<label for="nombre">Nombre</label> <input type="text" id="nombre"
+					th:field="*{nombre}" class="form-control" required>
+			</div>
+
+			<div class="form-group">
+				<label for="edad">dni</label> <input type="number" id="edad"
+					th:field="*{edad}" class="form-control" required>
+			</div>
+			<button type="submit" class="btn btn-primary">Guardar</button>
+			<a href="/usuarios" class="btn btn-secondary">Cancelar</a>
+		</form>
+	</div>
+</body>
+</html>
